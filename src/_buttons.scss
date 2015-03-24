@@ -15,6 +15,9 @@
     &:hover, &:focus {
         background: rgba(#999, .2);
     }
+    &:focus {
+        outline: 0;
+    }
     &:active {
         background: rgba(#999, .4);
     }
@@ -79,6 +82,14 @@
             }
             &:active {
                 background: darken($colour-secondary, 15%);
+            }
+        }
+
+        @include option(disabled) {
+            @extend .\+z-depth-0;
+            background: rgba(0, 0, 0, .12);
+            &:active {
+                @extend .\+z-depth-0;
             }
         }
     }
