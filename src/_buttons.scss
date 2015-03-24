@@ -5,45 +5,50 @@
     display: inline-block;
     line-height: 36px;
     min-width: 88px;
-    padding: 0 8px;
+    padding: $button-padding;
     text-align: center;
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
     zoom: 1;
 
+    ::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+
     &:hover, &:focus {
-        background: rgba(#999, .2);
+        background: $button-default-hover-background;
     }
     &:focus {
         outline: 0;
     }
     &:active {
-        background: rgba(#999, .4);
+        background: $button-default-click-background;
     }
 
     @include option(primary) {
-        color: $colour-primary;
+        color: $button-primary-type-colour;
         &:hover, &:focus {
-            background: rgba($colour-primary, .2);
+            background: $button-primary-hover-background;
         }
         &:active {
-            background: rgba($colour-primary, .4);
+            background: $button-primary-click-background;
         }
     }
 
     @include option(secondary) {
-        color: $colour-secondary;
+        color: $button-secondary-type-colour;
         &:hover, &:focus {
-            background: rgba($colour-secondary, .2);
+            background: $button-secondary-hover-background;
         }
         &:active {
-            background: rgba($colour-secondary, .4);
+            background: $button-secondary-click-background;
         }
     }
 
     @include option(disabled) {
-        color: rgba(0, 0, 0, .26);
+        color: $button-default-disabled-type-colour;
         cursor: not-allowed;
         &:hover, &:focus, &:active {
             background: none;
@@ -52,42 +57,43 @@
 
     @include option(raised) {
         @extend .\+z-depth-1;
-        background: #FFF;
+        background: $button-raised-background;
         &:hover, &:focus {
-            background: rgba(#999, .2);
+            background: $button-raised-hover-background;
         }
         &:active {
             @extend .\+z-depth-2;
-            background: rgba(#999, .4);
+            background: $button-raised-click-background;
         }
 
         @include option(primary) {
-            background: $colour-primary;
-            color: #FFF;
+            background: $button-raised-primary-background;
+            color: $button-raised-primary-type-colour;
 
             &:hover, &:focus {
-                background: darken($colour-primary, 5%);
+                background: $button-raised-primary-hover-background;
             }
             &:active {
-                background: darken($colour-primary, 15%);
+                background: $button-raised-primary-click-background;
             }
         }
 
         @include option(secondary) {
             background: $colour-secondary;
-            color: #FFF;
+            color: $button-raised-secondary-type-colour;
 
             &:hover, &:focus {
-                background: darken($colour-secondary, 5%);
+                background: $button-raised-secondary-hover-background;
             }
             &:active {
-                background: darken($colour-secondary, 15%);
+                background: $button-raised-secondary-click-background;
             }
         }
 
         @include option(disabled) {
             @extend .\+z-depth-0;
-            background: rgba(0, 0, 0, .12);
+            background: $button-raised-disabled-background;
+            color: $button-raised-disabled-type-colour;
             &:active {
                 @extend .\+z-depth-0;
             }

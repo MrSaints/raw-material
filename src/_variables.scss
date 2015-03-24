@@ -4,7 +4,7 @@
 $type-family: Roboto, sans-serif;
 
 /*
- * Colours
+ * Palette
  */
 $colour-primary: #3F51B5;
 $colour-secondary: #E91E63;
@@ -18,3 +18,36 @@ $colour-strong-white: rgba(255, 255, 255, 0.87);
  * Metrics
  */
 $keyline-increment: 64px;
+
+/*
+ * Buttons
+ */
+$button-padding: 0 8px;
+
+$button-default-hover-background: darken(#FFF, 8%);
+$button-default-click-background: darken(#FFF, 16%);
+$button-default-disabled-type-colour: darken(#FFF, 24%);
+
+$button-primary-type-colour: $colour-primary;
+$button-primary-hover-background: lighten($colour-primary, 40%);
+$button-primary-click-background: lighten($colour-primary, 32%);
+
+$button-secondary-type-colour: $colour-secondary;
+$button-secondary-hover-background: lighten($colour-secondary, 40%);
+$button-secondary-click-background: lighten($colour-secondary, 32%);
+
+$button-raised-background: #FFF;
+$button-raised-hover-background: $button-default-hover-background;
+$button-raised-click-background: $button-default-click-background;
+$button-raised-disabled-background: darken(#FFF, 12%);
+$button-raised-disabled-type-colour: darken($button-default-disabled-type-colour, 12%);
+
+$button-raised-primary-type-colour: #FFF;
+$button-raised-primary-background: $colour-primary;
+$button-raised-primary-hover-background: darken($colour-primary, 5%);
+$button-raised-primary-click-background: darken($colour-primary, 15%);
+
+$button-raised-secondary-type-colour: #FFF;
+$button-raised-secondary-background: $colour-secondary;
+$button-raised-secondary-hover-background: darken($colour-secondary, 5%);
+$button-raised-secondary-click-background: darken($colour-secondary, 15%);
