@@ -1,0 +1,16 @@
+component(button) {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    line-height: normal;
+    text-align: center;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    zoom: 1;
+}
+
+.button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}

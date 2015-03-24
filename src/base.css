@@ -1,0 +1,15 @@
+tweak(hidden) {
+    display: none !important;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+img {
+    option(fluid) {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+}
