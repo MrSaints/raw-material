@@ -7,3 +7,19 @@
     height: auto;
     max-width: 100%;
 }
+
+@include tweak(type-left) {
+    text-align: left;
+}
+
+@include tweak(type-right) {
+    text-align: right;
+}
+
+@include tweak(cpn-left) {
+    float: left;
+}
+
+@include tweak(cpn-right) {
+    float: right;
+}
