@@ -30,6 +30,9 @@
 #csstyle .\+z-depth-5 {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
 
+#csstyle .\+z-depth-0, #csstyle .button.\--raised.\--disabled, #csstyle button.\--raised.\--disabled {
+  box-shadow: none; }
+
 /*
  * Override defaults
  */
@@ -140,6 +143,8 @@ h1, h2, h3, h4, h5, h6 {
   zoom: 1; }
   .button:hover, button:hover, .button:focus, button:focus {
     background: rgba(153, 153, 153, 0.2); }
+  .button:focus, button:focus {
+    outline: 0; }
   .button:active, button:active {
     background: rgba(153, 153, 153, 0.4); }
   .button.\--primary, button.\--primary {
@@ -179,5 +184,7 @@ h1, h2, h3, h4, h5, h6 {
         background: #d81557; }
       .button.\--raised.\--secondary:active, button.\--raised.\--secondary:active {
         background: #aa1145; }
+    .button.\--raised.\--disabled, button.\--raised.\--disabled {
+      background: rgba(0, 0, 0, 0.12); }
 
 /*# sourceMappingURL=raw-material.css.map */
