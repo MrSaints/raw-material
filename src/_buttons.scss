@@ -1,0 +1,85 @@
+@include component(button) {
+    box-sizing: border-box;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 36px;
+    min-width: 88px;
+    padding: 0 8px;
+    text-align: center;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    zoom: 1;
+
+    &:hover, &:focus {
+        background: rgba(#999, .2);
+    }
+    &:active {
+        background: rgba(#999, .4);
+    }
+
+    @include option(primary) {
+        color: $colour-primary;
+        &:hover, &:focus {
+            background: rgba($colour-primary, .2);
+        }
+        &:active {
+            background: rgba($colour-primary, .4);
+        }
+    }
+
+    @include option(secondary) {
+        color: $colour-secondary;
+        &:hover, &:focus {
+            background: rgba($colour-secondary, .2);
+        }
+        &:active {
+            background: rgba($colour-secondary, .4);
+        }
+    }
+
+    @include option(disabled) {
+        color: rgba(0, 0, 0, .26);
+        cursor: not-allowed;
+        &:hover, &:focus, &:active {
+            background: none;
+        }
+    }
+
+    @include option(raised) {
+        @extend .\+z-depth-1;
+        background: #FFF;
+        &:hover, &:focus {
+            background: rgba(#999, .2);
+        }
+        &:active {
+            @extend .\+z-depth-2;
+            background: rgba(#999, .4);
+        }
+
+        @include option(primary) {
+            background: $colour-primary;
+            color: #FFF;
+
+            &:hover, &:focus {
+                background: darken($colour-primary, 5%);
+            }
+            &:active {
+                background: darken($colour-primary, 15%);
+            }
+        }
+
+        @include option(secondary) {
+            background: $colour-secondary;
+            color: #FFF;
+
+            &:hover, &:focus {
+                background: darken($colour-secondary, 5%);
+            }
+            &:active {
+                background: darken($colour-secondary, 15%);
+            }
+        }
+    }
+}

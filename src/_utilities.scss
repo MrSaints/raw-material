@@ -1,0 +1,9 @@
+@include tweak(hidden) {
+    display: none;
+}
+
+@include tweak(fluid) {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}

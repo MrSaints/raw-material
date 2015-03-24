@@ -1,0 +1,122 @@
+/*
+ * Override defaults
+ */
+html {
+    /*
+     * TODO: Noto Sans for other languages;
+     */
+    font-family: $type-family;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin: 0;
+}
+
+h1 { @extend .display-3; }
+h2 { @extend .display-2; }
+h3 { @extend .display-1; }
+h4 { @extend .headline; }
+h5 { @extend .title; }
+h6 { @extend .subhead-1; }
+span { @extend .body-2; }
+body, p { @extend .body-1; }
+small { @extend .caption; }
+button { @extend .button; }
+nav { @extend .menu; }
+
+
+/*
+ * Class components
+ */
+@include component(display-4) {
+    color: $colour-weak-black;
+    font-size: 112px;
+    font-weight: 300;
+    line-height: 128px;
+    letter-spacing: -1px;
+    margin-bottom: 28px;
+}
+
+@include component(display-3) {
+    color: $colour-weak-black;
+    font-size: 56px;
+    line-height: 64px;
+    margin-bottom: 28px;
+}
+
+@include component(display-2) {
+    color: $colour-weak-black;
+    font-size: 45px;
+    line-height: 48px;
+    margin-bottom: 28px;
+}
+
+@include component(display-1) {
+    color: $colour-weak-black;
+    font-size: 34px;
+    line-height: 40px;
+    margin-bottom: 28px;
+}
+
+@include component(headline) {
+    color: $colour-strong-black;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+
+@include component(title) {
+    color: $colour-strong-black;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+
+@include component(subhead-2) {
+    color: $colour-strong-black;
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+
+@include component(subhead-1) {
+    color: $colour-strong-black;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+@include component(body-2) {
+    color: $colour-strong-black;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+@include component(body-1) {
+    color: $colour-strong-black;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+
+@include component(caption) {
+    color: $colour-weak-black;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+@include component(menu) {
+    color: $colour-strong-black;
+}
+
+@include component(button) {
+    color: $colour-strong-black;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+}

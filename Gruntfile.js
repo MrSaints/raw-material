@@ -1,30 +1,24 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
-        postcss: {
-            options: {
-                map: true,
-                processors: [
-                    require("postcss-nested"),
-                    require("csstyle")
-                ]
-            },
+        sass: {
             dist: {
-                expand: true,
-                flatten: true,
-                src: "src/*.css",
-                dest: "dist/"
+                files: {
+                    "dist/raw-material.css": "src/core.scss"
+                }
             }
         },
+        clean: ["dist"],
         watch: {
-            files: ["src/*.css"],
+            files: ["src/*.scss"],
             tasks: ["build"]
         }
     });
 
+    grunt.loadNpmTasks("grunt-contrib-clean");
+    grunt.loadNpmTasks("grunt-contrib-sass");
     grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks("grunt-postcss");
 
     grunt.registerTask("default", ["build"]);
-    grunt.registerTask("build", ["postcss"]);
+    grunt.registerTask("build", ["clean", "sass"]);
 }
