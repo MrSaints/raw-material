@@ -10,7 +10,7 @@ module.exports = function (grunt) {
         },
         clean: ["dist"],
         watch: {
-            files: ["src/*.scss"],
+            files: ["src/**/*"],
             tasks: ["build"]
         }
     });
