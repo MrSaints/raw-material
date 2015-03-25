@@ -30,7 +30,7 @@ nav { @extend .menu; }
  * Class components
  */
 @include component(display-4) {
-    color: $colour-weak-black;
+    color: $type-secondary-colour;
     font-size: 112px;
     font-weight: 300;
     line-height: 128px;
@@ -39,35 +39,35 @@ nav { @extend .menu; }
 }
 
 @include component(display-3) {
-    color: $colour-weak-black;
+    color: $type-secondary-colour;
     font-size: 56px;
     line-height: 64px;
     margin-bottom: 28px;
 }
 
 @include component(display-2) {
-    color: $colour-weak-black;
+    color: $type-secondary-colour;
     font-size: 45px;
     line-height: 48px;
     margin-bottom: 28px;
 }
 
 @include component(display-1) {
-    color: $colour-weak-black;
+    color: $type-secondary-colour;
     font-size: 34px;
     line-height: 40px;
     margin-bottom: 28px;
 }
 
 @include component(headline) {
-    color: $colour-strong-black;
+    color: $type-primary-colour;
     font-size: 24px;
     line-height: 32px;
     margin-bottom: 16px;
 }
 
 @include component(title) {
-    color: $colour-strong-black;
+    color: $type-primary-colour;
     font-size: 20px;
     font-weight: 500;
     line-height: 20px;
@@ -75,21 +75,21 @@ nav { @extend .menu; }
 }
 
 @include component(subhead-2) {
-    color: $colour-strong-black;
+    color: $type-primary-colour;
     font-size: 15px;
     line-height: 28px;
     margin-bottom: 16px;
 }
 
 @include component(subhead-1) {
-    color: $colour-strong-black;
+    color: $type-primary-colour;
     font-size: 15px;
     line-height: 24px;
     margin-bottom: 16px;
 }
 
 @include component(body-2) {
-    color: $colour-strong-black;
+    color: $type-primary-colour;
     font-size: 13px;
     font-weight: 500;
     line-height: 24px;
@@ -97,24 +97,24 @@ nav { @extend .menu; }
 }
 
 @include component(body-1) {
-    color: $colour-strong-black;
+    color: $type-primary-colour;
     font-size: 13px;
     line-height: 20px;
     margin-bottom: 16px;
 }
 
 @include component(caption) {
-    color: $colour-weak-black;
+    color: $type-secondary-colour;
     font-size: 12px;
     line-height: 12px;
 }
 
 @include component(menu) {
-    color: $colour-strong-black;
+    color: $type-primary-colour;
 }
 
 @include component(button) {
-    color: $colour-strong-black;
+    color: $type-primary-colour;
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;

@@ -79,7 +79,7 @@
         }
 
         @include option(secondary) {
-            background: $colour-secondary;
+            background: $button-raised-secondary-background;
             color: $button-raised-secondary-type-colour;
 
             &:hover, &:focus {
@@ -93,7 +93,7 @@
         @include option(disabled) {
             @extend .\+z-depth-0;
             background: $button-raised-disabled-background;
-            color: $button-raised-disabled-type-colour;
+
             &:active {
                 @extend .\+z-depth-0;
             }

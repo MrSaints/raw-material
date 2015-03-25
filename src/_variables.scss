@@ -1,53 +1,75 @@
 /*
+ * Palette
+ */
+@import "palette";
+$theme: light;
+$palette-primary: blue;
+$palette-secondary: pink;
+
+$colour-primary: get-colour($palette-primary, 500);
+$colour-secondary: get-colour($palette-secondary, A200);
+
+
+/*
  * Typography
  */
 $type-family: Roboto, sans-serif;
 
-/*
- * Palette
- */
-$colour-primary: #3F51B5;
-$colour-secondary: #E91E63;
+$type-primary-colour: rgba(0, 0, 0, 0.87);
+$type-secondary-colour: rgba(0, 0, 0, 0.54);
 
-$colour-weak-black: rgba(0, 0, 0, 0.54);
-$colour-strong-black: rgba(0, 0, 0, 0.87);
-$colour-weak-white: rgba(255, 255, 255, 0.54);
-$colour-strong-white: rgba(255, 255, 255, 0.87);
+@if $theme == dark {
+    $type-primary-colour: #FFF;
+    $type-secondary-colour: rgba(255, 255, 255, 0.7);
+}
+
 
 /*
  * Metrics
  */
 $keyline-increment: 64px;
 
+
 /*
  * Buttons
  */
 $button-padding: 0 8px;
 
-$button-default-hover-background: darken(#FFF, 8%);
-$button-default-click-background: darken(#FFF, 16%);
-$button-default-disabled-type-colour: darken(#FFF, 24%);
+$button-default-disabled-type-colour: rgba(#000, .26);
+$button-default-hover-background: rgba(#999, .2);
+$button-default-click-background: rgba(#999, .4);
 
 $button-primary-type-colour: $colour-primary;
-$button-primary-hover-background: lighten($colour-primary, 40%);
-$button-primary-click-background: lighten($colour-primary, 32%);
+$button-primary-hover-background: rgba($colour-primary, .2);
+$button-primary-click-background: rgba($colour-primary, .4);
 
 $button-secondary-type-colour: $colour-secondary;
-$button-secondary-hover-background: lighten($colour-secondary, 40%);
-$button-secondary-click-background: lighten($colour-secondary, 32%);
+$button-secondary-hover-background: rgba($colour-secondary, .2);
+$button-secondary-click-background: rgba($colour-secondary, .4);
 
 $button-raised-background: #FFF;
+$button-raised-disabled-background: rgba(#000, .12);
 $button-raised-hover-background: $button-default-hover-background;
 $button-raised-click-background: $button-default-click-background;
-$button-raised-disabled-background: darken(#FFF, 12%);
-$button-raised-disabled-type-colour: darken($button-default-disabled-type-colour, 12%);
 
 $button-raised-primary-type-colour: #FFF;
 $button-raised-primary-background: $colour-primary;
-$button-raised-primary-hover-background: darken($colour-primary, 5%);
-$button-raised-primary-click-background: darken($colour-primary, 15%);
+$button-raised-primary-hover-background: get-colour($palette-primary, 600);
+$button-raised-primary-click-background: get-colour($palette-primary, 700);
 
 $button-raised-secondary-type-colour: #FFF;
 $button-raised-secondary-background: $colour-secondary;
-$button-raised-secondary-hover-background: darken($colour-secondary, 5%);
-$button-raised-secondary-click-background: darken($colour-secondary, 15%);
+$button-raised-secondary-hover-background: get-colour($palette-secondary, 500);
+$button-raised-secondary-click-background: get-colour($palette-secondary, 600);
+
+/*
+ * TODO: More elegant way?
+ */
+@if $theme == dark {
+    $button-default-disabled-type-colour: rgba(#FFF, .30);
+    $button-default-hover-background: rgba(#CCC, .15);
+    $button-default-click-background: rgba(#CCC, .25);
+
+    $button-raised-disabled-background: rgba(#FFF, .12);
+    $button-raised-background: rgba(#FFF, .2);
+}

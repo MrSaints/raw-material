@@ -1,14 +1,17 @@
 /*
- * Typography
+ * Palette
  */
 /*
- * Palette
+ * Typography
  */
 /*
  * Metrics
  */
 /*
  * Buttons
+ */
+/*
+ * TODO: More elegant way?
  */
 #csstyle .\+hidden {
   display: none; }
@@ -160,50 +163,49 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 0;
     border: 0; }
   .button:hover, button:hover, .button:focus, button:focus {
-    background: #ebebeb; }
+    background: rgba(153, 153, 153, 0.2); }
   .button:focus, button:focus {
     outline: 0; }
   .button:active, button:active {
-    background: #d6d6d6; }
+    background: rgba(153, 153, 153, 0.4); }
   .button.\--primary, button.\--primary {
-    color: #3F51B5; }
+    color: #2196F3; }
     .button.\--primary:hover, button.\--primary:hover, .button.\--primary:focus, button.\--primary:focus {
-      background: #d1d6ef; }
+      background: rgba(33, 150, 243, 0.2); }
     .button.\--primary:active, button.\--primary:active {
-      background: #b3bae4; }
+      background: rgba(33, 150, 243, 0.4); }
   .button.\--secondary, button.\--secondary {
-    color: #E91E63; }
+    color: #FF4081; }
     .button.\--secondary:hover, button.\--secondary:hover, .button.\--secondary:focus, button.\--secondary:focus {
-      background: #fbd8e4; }
+      background: rgba(255, 64, 129, 0.2); }
     .button.\--secondary:active, button.\--secondary:active {
-      background: #f8b3ca; }
+      background: rgba(255, 64, 129, 0.4); }
   .button.\--disabled, button.\--disabled {
-    color: #c2c2c2;
+    color: rgba(0, 0, 0, 0.26);
     cursor: not-allowed; }
     .button.\--disabled:hover, button.\--disabled:hover, .button.\--disabled:focus, button.\--disabled:focus, .button.\--disabled:active, button.\--disabled:active {
       background: none; }
   .button.\--raised, button.\--raised {
     background: #FFF; }
     .button.\--raised:hover, button.\--raised:hover, .button.\--raised:focus, button.\--raised:focus {
-      background: #ebebeb; }
+      background: rgba(153, 153, 153, 0.2); }
     .button.\--raised:active, button.\--raised:active {
-      background: #d6d6d6; }
+      background: rgba(153, 153, 153, 0.4); }
     .button.\--raised.\--primary, button.\--raised.\--primary {
-      background: #3F51B5;
+      background: #2196F3;
       color: #FFF; }
       .button.\--raised.\--primary:hover, button.\--raised.\--primary:hover, .button.\--raised.\--primary:focus, button.\--raised.\--primary:focus {
-        background: #3849a2; }
+        background: #1E88E5; }
       .button.\--raised.\--primary:active, button.\--raised.\--primary:active {
-        background: #2b387c; }
+        background: #1976D2; }
     .button.\--raised.\--secondary, button.\--raised.\--secondary {
-      background: #E91E63;
+      background: #FF4081;
       color: #FFF; }
       .button.\--raised.\--secondary:hover, button.\--raised.\--secondary:hover, .button.\--raised.\--secondary:focus, button.\--raised.\--secondary:focus {
-        background: #d81557; }
+        background: #E91E63; }
       .button.\--raised.\--secondary:active, button.\--raised.\--secondary:active {
-        background: #aa1145; }
+        background: #D81B60; }
     .button.\--raised.\--disabled, button.\--raised.\--disabled {
-      background: #e0e0e0;
-      color: #a3a3a3; }
+      background: rgba(0, 0, 0, 0.12); }
 
 /*# sourceMappingURL=raw-material.css.map */
