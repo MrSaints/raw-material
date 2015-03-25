@@ -32,34 +32,59 @@ $keyline-increment: 64px;
 /*
  * Buttons
  */
+$button-margin: 0 4px;
 $button-padding: 0 8px;
 
+/* Default (Flat) */
 $button-default-disabled-type-colour: rgba(#000, .26);
 $button-default-hover-background: rgba(#999, .2);
 $button-default-click-background: rgba(#999, .4);
 
+/* Default (Flat) > Primary */
 $button-primary-type-colour: $colour-primary;
 $button-primary-hover-background: rgba($colour-primary, .2);
 $button-primary-click-background: rgba($colour-primary, .4);
 
+/* Default (Flat) > Secondary */
 $button-secondary-type-colour: $colour-secondary;
 $button-secondary-hover-background: rgba($colour-secondary, .2);
 $button-secondary-click-background: rgba($colour-secondary, .4);
 
+/* Raised */
 $button-raised-background: #FFF;
 $button-raised-disabled-background: rgba(#000, .12);
 $button-raised-hover-background: $button-default-hover-background;
 $button-raised-click-background: $button-default-click-background;
 
+/* Raised > Primary */
 $button-raised-primary-type-colour: #FFF;
 $button-raised-primary-background: $colour-primary;
 $button-raised-primary-hover-background: get-colour($palette-primary, 600);
 $button-raised-primary-click-background: get-colour($palette-primary, 700);
 
+/* Raised > Secondary */
 $button-raised-secondary-type-colour: #FFF;
 $button-raised-secondary-background: $colour-secondary;
 $button-raised-secondary-hover-background: get-colour($palette-secondary, 500);
 $button-raised-secondary-click-background: get-colour($palette-secondary, 600);
+
+/* Floating */
+$button-floating-background: darken(#FFF, 1%);
+$button-floating-hover-background: $button-raised-hover-background;
+$button-floating-click-background: $button-raised-click-background;
+
+/* Floating > Primary */
+$button-floating-primary-type-colour: $button-raised-primary-type-colour;
+$button-floating-primary-background: $button-raised-primary-background;
+$button-floating-primary-hover-background: $button-raised-primary-hover-background;
+$button-floating-primary-click-background: $button-raised-primary-click-background;
+
+/* Floating > Secondary */
+$button-floating-secondary-type-colour: $button-raised-secondary-type-colour;
+$button-floating-secondary-background: $button-raised-secondary-background;
+$button-floating-secondary-hover-background: $button-raised-secondary-hover-background;
+$button-floating-secondary-click-background: $button-raised-secondary-click-background;
+
 
 /*
  * TODO: More elegant way?
@@ -71,4 +96,7 @@ $button-raised-secondary-click-background: get-colour($palette-secondary, 600);
 
     $button-raised-disabled-background: rgba(#FFF, .12);
     $button-raised-background: rgba(#FFF, .2);
+
+    $button-floating-disabled-background: $button-raised-disabled-background;
+    $button-floating-background: $button-raised-background;
 }

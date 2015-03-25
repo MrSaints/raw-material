@@ -10,6 +10,15 @@
 /*
  * Buttons
  */
+/* Default (Flat) */
+/* Default (Flat) > Primary */
+/* Default (Flat) > Secondary */
+/* Raised */
+/* Raised > Primary */
+/* Raised > Secondary */
+/* Floating */
+/* Floating > Primary */
+/* Floating > Secondary */
 /*
  * TODO: More elegant way?
  */
@@ -33,10 +42,10 @@
 #csstyle .\+cpn-right {
   float: right; }
 
-#csstyle .\+z-depth-1, #csstyle .button.\--raised, #csstyle button.\--raised {
+#csstyle .\+z-depth-1, #csstyle .button.\--raised, #csstyle button.\--raised, #csstyle .button.\--floating, #csstyle button.\--floating {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
-#csstyle .\+z-depth-2, #csstyle .button.\--raised:active, #csstyle button.\--raised:active {
+#csstyle .\+z-depth-2, #csstyle .button.\--raised:active, #csstyle button.\--raised:active, #csstyle .button.\--floating:active, #csstyle button.\--floating:active {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
 #csstyle .\+z-depth-3 {
@@ -153,6 +162,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: inline-block;
   line-height: 36px;
   min-width: 88px;
+  margin: 0 4px;
   padding: 0 8px;
   text-align: center;
   user-select: none;
@@ -207,5 +217,30 @@ h1, h2, h3, h4, h5, h6, p {
         background: #D81B60; }
     .button.\--raised.\--disabled, button.\--raised.\--disabled {
       background: rgba(0, 0, 0, 0.12); }
+  .button.\--floating, button.\--floating {
+    background: #fcfcfc;
+    border-radius: 50%;
+    line-height: 56px;
+    min-width: 0;
+    padding: 0;
+    width: 56px; }
+    .button.\--floating:hover, button.\--floating:hover, .button.\--floating:focus, button.\--floating:focus {
+      background: rgba(153, 153, 153, 0.2); }
+    .button.\--floating:active, button.\--floating:active {
+      background: rgba(153, 153, 153, 0.4); }
+    .button.\--floating.\--primary, button.\--floating.\--primary {
+      background: #2196F3;
+      color: #FFF; }
+      .button.\--floating.\--primary:hover, button.\--floating.\--primary:hover, .button.\--floating.\--primary:focus, button.\--floating.\--primary:focus {
+        background: #1E88E5; }
+      .button.\--floating.\--primary:active, button.\--floating.\--primary:active {
+        background: #1976D2; }
+    .button.\--floating.\--secondary, button.\--floating.\--secondary {
+      background: #FF4081;
+      color: #FFF; }
+      .button.\--floating.\--secondary:hover, button.\--floating.\--secondary:hover, .button.\--floating.\--secondary:focus, button.\--floating.\--secondary:focus {
+        background: #E91E63; }
+      .button.\--floating.\--secondary:active, button.\--floating.\--secondary:active {
+        background: #D81B60; }
 
 /*# sourceMappingURL=raw-material.css.map */

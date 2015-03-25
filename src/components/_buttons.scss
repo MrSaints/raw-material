@@ -5,6 +5,7 @@
     display: inline-block;
     line-height: 36px;
     min-width: 88px;
+    margin: $button-margin;
     padding: $button-padding;
     text-align: center;
     user-select: none;
@@ -96,6 +97,48 @@
 
             &:active {
                 @extend .\+z-depth-0;
+            }
+        }
+    }
+
+    @include option(floating) {
+        @extend .\+z-depth-1;
+        background: $button-floating-background;
+        border-radius: 50%;
+        line-height: 56px;
+        min-width: 0;
+        padding: 0;
+        width: 56px;
+
+        &:hover, &:focus {
+            background: $button-floating-hover-background;
+        }
+        &:active {
+            @extend .\+z-depth-2;
+            background: $button-floating-click-background;
+        }
+
+        @include option(primary) {
+            background: $button-floating-primary-background;
+            color: $button-floating-primary-type-colour;
+
+            &:hover, &:focus {
+                background: $button-floating-primary-hover-background;
+            }
+            &:active {
+                background: $button-floating-primary-click-background;
+            }
+        }
+
+        @include option(secondary) {
+            background: $button-floating-secondary-background;
+            color: $button-floating-secondary-type-colour;
+
+            &:hover, &:focus {
+                background: $button-floating-secondary-hover-background;
+            }
+            &:active {
+                background: $button-floating-secondary-click-background;
             }
         }
     }
