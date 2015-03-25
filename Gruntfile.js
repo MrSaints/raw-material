@@ -21,4 +21,5 @@ module.exports = function (grunt) {
 
     grunt.registerTask("default", ["build"]);
     grunt.registerTask("build", ["clean", "sass"]);
+    grunt.registerTask("build:dev", ["build", "watch"]);
 }
