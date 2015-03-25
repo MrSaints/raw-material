@@ -1,7 +1,10 @@
 @import "node_modules/csstyle/csstyle";
+
+@import "palette";
 @import "variables";
 
-@import "utilities";
-@import "zdepth";
-@import "typography";
-@import "buttons";
+@import "tweaks/utilities";
+@import "tweaks/zdepth";
+
+@import "components/typography";
+@import "components/buttons";
